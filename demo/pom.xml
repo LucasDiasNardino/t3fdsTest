@@ -2,11 +2,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>t3.fds</groupId> <!-- Alterar -->
-	<artifactId>demo</artifactId> <!-- Alterar -->
+	<artifactId>App</artifactId> <!-- Alterar -->
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>T3</name> <!-- Alterar -->
+	<name>ExercicioCSV</name> <!-- Alterar -->
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -34,19 +34,15 @@
 			<artifactId>mockito-all</artifactId>
 			<version>1.10.19</version>
 		</dependency>
-    <!--Apache Commons CSV-->
-    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
-    <dependency>
-        <groupId>org.apache.commons</groupId>
-        <artifactId>commons-csv</artifactId>
-        <version>1.7</version>
-    </dependency>
-
-
-
+		<!-- Dependencias do CSV -->
+		<dependency>
+    		<groupId>org.apache.commons</groupId>
+   			<artifactId>commons-csv</artifactId>
+   			<version>1.7</version>
+	</dependency>
 	</dependencies>
 	<build>
-		<finalName>T3</finalName>
+		<finalName>Exercicio</finalName>
 		<pluginManagement>
 			<plugins>
 				<!-- Define o compilador de plugins -->
@@ -55,7 +51,7 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 					<configuration>
-						<release>11</release>
+						<release>14</release>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -80,8 +76,8 @@
 				</plugin>
 				<!-- Plugin para executar o jar file -->
 				<plugin>
-					<groupId>t3.fds</groupId>
-					<artifactId>demo</artifactId>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
 					<version>3.0.0</version>
 					<configuration>
 						<mainClass>t3.fds.App</mainClass>
@@ -89,10 +85,10 @@
 				</plugin>
 				<!-- Plugin para gerar relatório de testes -->
 				<plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M4</version>
-        </plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M4</version>
+                </plugin>
 			</plugins>
 		</pluginManagement>
 	</build>

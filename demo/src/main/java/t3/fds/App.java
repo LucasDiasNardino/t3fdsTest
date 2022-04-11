@@ -47,6 +47,7 @@ public class App {
                 System.out.println("print do enzo");
                  
                 }
+                System.out.println("print do lolo");
             }
 
             System.out.println("\nEnd of code.");
